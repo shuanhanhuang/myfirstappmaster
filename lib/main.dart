@@ -7,8 +7,8 @@ void main() {
         style:TextStyle(fontSize:50,color: Colors.red,decoration:  TextDecoration.underline)
 
       );
-  var img = Image.network("https://i0.wp.com/tyenews.com/wp-content/uploads/2021/05/%E7%8B%97%E7%8B%975411953.jpg");
-  var appBody = Container(
+  //var img = Image.network("https://i0.wp.com/tyenews.com/wp-content/uploads/2021/05/%E7%8B%97%E7%8B%975411953.jpg");
+  /*var appBody = Container(
     child: hiFlutter,
     //child: img,
     alignment: Alignment.topRight,
@@ -18,6 +18,25 @@ void main() {
     //heightFactor: 2,
     //widthFactor: 1.5,
 
+  );*/
+  //var img = Image.network("https://i0.wp.com/tyenews.com/wp-content/uploads/2021/05/%E7%8B%97%E7%8B%975411953.jpg");
+  var appBody =Column(
+  children: const <Widget>[
+      Expanded(
+      child: Text('Deliver features faster', textAlign: TextAlign.center),
+  ),
+  Expanded(
+  child: Text('Craft beautiful UIs', textAlign: TextAlign.center),
+  ),
+  Expanded(
+    child: FittedBox(
+        child: FittedBox(
+          fit: BoxFit.contain, // otherwise the logo will be tiny
+          child: FlutterLogo(),
+      )
+    ),
+  ),
+    ],
   );
   /*ar appBody = Center(
     child: Container(
